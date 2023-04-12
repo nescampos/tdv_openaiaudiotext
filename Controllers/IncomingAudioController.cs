@@ -50,7 +50,7 @@ public class IncomingAudioController : TwilioController
 
         var oldFilePath = filePath;
         filePath = Path.ChangeExtension(filePath, ".wav");
-        ConvertMediaUsingFffmpeg(oldFilePath, filePath);
+        ConvertMediaUsingFfmpeg(oldFilePath, filePath);
         System.IO.File.Delete(oldFilePath);
         
         string textFromAudio = await ProcessAudio(filePath);
@@ -98,7 +98,7 @@ public class IncomingAudioController : TwilioController
         return audioResponse.Text;
     }
 
-    private void ConvertMediaUsingFffmpeg(string filePath, string newFilePath)
+    private void ConvertMediaUsingFfmpeg(string filePath, string newFilePath)
     {
         FFMpegArguments
             .FromFileInput(filePath)
