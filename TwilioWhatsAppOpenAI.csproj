@@ -1,17 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>06595a72-20c1-4746-b5e7-e0c838c93de7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Betalgo.OpenAI.GPT3" Version="6.8.3" />
     <PackageReference Include="FFMpegCore" Version="5.1.0" />
     <PackageReference Include="Twilio" Version="6.3.0" />
     <PackageReference Include="Twilio.AspNet.Core" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OpenAI.GPT3">
+      <HintPath>..\openai\OpenAI.SDK\bin\Debug\net6.0\OpenAI.GPT3.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
