@@ -11,12 +11,6 @@
     <PackageReference Include="FFMpegCore" Version="5.1.0" />
     <PackageReference Include="Twilio" Version="6.3.0" />
     <PackageReference Include="Twilio.AspNet.Core" Version="8.0.0" />
+    <PackageReference Include="Betalgo.OpenAI" Version="6.8.5" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="OpenAI.GPT3">
-      <HintPath>..\openai\OpenAI.SDK\bin\Debug\net6.0\OpenAI.GPT3.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

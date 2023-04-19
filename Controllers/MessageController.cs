@@ -29,7 +29,7 @@ public class MessageController : TwilioController
     }
 
     [HttpPost]
-    public async Task<IActionResult> Receive(CancellationToken ct)
+    public async Task<IActionResult> Index(CancellationToken ct)
     {
         var response = new MessagingResponse();
         var form = await Request.ReadFormAsync(ct);
